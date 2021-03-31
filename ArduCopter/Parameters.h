@@ -222,6 +222,8 @@ public:
         k_param_gcs3,
         k_param_gcs_pid_mask,    // 126
 
+        k_param_takeoff_roll,   // 127
+
         //
         // 135 : reserved for Solo until features merged with master
         //
@@ -408,6 +410,8 @@ public:
     AP_Int16        poshold_brake_rate;         // PosHold flight mode's rotation rate during braking in deg/sec
     AP_Int16        poshold_brake_angle_max;    // PosHold flight mode's max lean angle during braking in centi-degrees
     
+    AP_Float        takeoff_roll;               // Roll aircraft after takeoff altitude has reached
+
     // Waypoints
     //
     AP_Int32        rtl_loiter_time;

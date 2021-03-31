@@ -1,5 +1,7 @@
 #include "Copter.h"
+#include "GCS_MAVLink/GCS.h"
 
+static uint8_t temp = 0;
 Mode::_TakeOff Mode::takeoff;
 
 // This file contains the high-level takeoff logic for Loiter, PosHold, AltHold, Sport modes.
@@ -66,6 +68,12 @@ void Mode::_TakeOff::start(float alt_cm)
     max_speed = speed;
     start_ms = millis();
     alt_delta = alt_cm;
+
+    for(temp = 0; temp < 50; temp++)
+    {
+        //gcs().send_text(MAV_SEVERITY_CRITICAL, "hello world! %5.3f", (double)3.142f);
+    }
+
 }
 
 // stop takeoff

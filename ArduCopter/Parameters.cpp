@@ -158,6 +158,13 @@ const AP_Param::Info Copter::var_info[] = {
     // @Increment: 1000
     // @User: Standard
     GSCALAR(rtl_loiter_time,      "RTL_LOIT_TIME",    RTL_LOITER_TIME),
+
+    // @Param: TAKEOFF_ROLL
+    // @DisplayName: TakeOff Roll
+    // @Description: Roll after takeoff completion 
+    // @Range: 0 1
+    // @User: Advanced
+    GSCALAR(takeoff_roll, "TAKEOFF_ROLL", TAKEOFF_ROLL_DEFAULT),
 #endif
 
 #if RANGEFINDER_ENABLED == ENABLED

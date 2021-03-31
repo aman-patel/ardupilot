@@ -792,3 +792,8 @@
 #ifndef HAL_FRAME_TYPE_DEFAULT
 #define HAL_FRAME_TYPE_DEFAULT AP_Motors::MOTOR_FRAME_TYPE_X
 #endif
+
+//TakeOff Mode Param
+#ifndef TAKEOFF_ROLL_dEFAULT
+ # define TAKEOFF_ROLL_DEFAULT      0     // default value for TAKEOFF_ROLL, 0 = no action
+#endif
